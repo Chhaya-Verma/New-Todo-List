@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    <div class="container">
+        <div id="emoji-container" style="font-size: 50px; text-align: center; margin-bottom: 10px;"></div>
+
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <form id="taskform">
+            <input type="text" id="inputtask" placeholder="Write your task" required>
+            <button type="submit" id="newtask">+</button>
+        </form>
+
+        <div id="checktask">
+            <button id="allTasks">All Tasks</button>
+            <button id="completeTasks">Complete Tasks</button>
+            <button id="pendingTasks">Pending Tasks</button>
+        </div>
+
+        <div id="task-container">
+    <img id="no-task-img" src="https://cdni.iconscout.com/illustration/premium/thumb/todo-list-illustration-download-in-svg-png-gif-file-formats--completed-task-complete-tasks-completion-tasklist-business-management-pack-people-illustrations-4609476.png?f=webp" alt="No tasks illustration" style="width: 200px; display: none;">
+    <ul id="tasklist"></ul>
+</div>
+<div id="emoji-container"></div>
+
+    </div>
+    
+    <script src="todolist.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://cdn.prod.website-files.com/5a9ee6416e90d20001b20038/64f5e02cb5805eb6fd8e503c_Rectangle%20(98).svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: transparent;
+    padding: 20px;
+    border: 2px dotted white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 500px;
+}
+
+#emoji-container {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#progress-container {
+    width: 100%;
+    background-color: transparent;
+    border: 2px dotted wheat;
+    border-radius: 10px;
+    height: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #d7ddd8;
+    transition: width 0.3s ease;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px dotted #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#newtask{
+    background-color: transparent;
+    font-size: 25px;
+    border: 2px dotted white;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    background-color: #76c7c0;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #68b2a2;
+}
+
+#checktask {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#checktask button {
+    width: 140px;
+    height: 50px;
+    border: 2px dotted white;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(24, 22, 22);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checktask button:hover {
+    background-color: #68b2a2;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    width: 450px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px dotted wheat;
+    border-radius: 5px;
+}
+
+li input[type="checkbox"] {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex-grow: 1;
+    text-align: center; 
+}
+
+li .task-text {
+    flex-grow: 1;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: 200px;
+}
+
+ul#tasklist {
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+li button img {
+    width: 35px;
+    height: 35px;
+}
+
+/* checkbox{
+    width: 25px; 
+    height:25px; 
+    margin-right: 100px;
+    background-color: black; 
+    border: 2px solid white;
+} */
+
+#no-task-img{
+    margin-left: 120px;
+}
+
+@media (max-width: 900px) {
+    body {
+        height: auto;
+        align-items: flex-start;
+    }
+    .container {
+        width: 90%;
+    }
+
+    li {
+        width: 100%;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    #emoji-container {
+        font-size: 30px;
+    }
+
+    #checktask button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
+    /*new added code */
+    .container{
+        width: 100%;
+        padding: 8px;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+    li {
+        width: 100%;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 5px;
+        width: 100%;
+    }
+    #emoji-container {
+        font-size: 15px;
+        text-align: center;
+        
+    }
+    input {
+        font-size: 16px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    li button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #no-task-img {
+        width: 80px;
+    }
+}
+
+h1 {
+    font-size: 3em; /* Default size for larger screens */
+    word-wrap: break-word; /* Breaks long words */
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Smaller size for mobile */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5em; /* Even smaller size for small screens */
+    }
+}
+/* @media (max-width: 200px) {
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+    #emoji-container {
+        font-size: 10px;
+        text-align: center;
+        
+    }
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    li button img {
+        width: 18px;
+        height: 18px;
+    }
+
+    #no-task-img {
+        width: 60px;
+    }
+}
+
+ */
